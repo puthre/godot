@@ -1496,6 +1496,11 @@ Vector<int> _Geometry::triangulate_polygon(const Vector<Vector2> &p_polygon) {
 	return Geometry::triangulate_polygon(p_polygon);
 }
 
+Vector<int> _Geometry::triangulate_delaunay_2d(const Vector<Vector2> &p_points) {
+
+	return Geometry::triangulate_delaunay_2d(p_points);
+}
+
 Vector<Point2> _Geometry::convex_hull_2d(const Vector<Point2> &p_points) {
 
 	return Geometry::convex_hull_2d(p_points);
@@ -1567,6 +1572,7 @@ void _Geometry::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("point_is_inside_triangle", "point", "a", "b", "c"), &_Geometry::point_is_inside_triangle);
 
 	ClassDB::bind_method(D_METHOD("triangulate_polygon", "polygon"), &_Geometry::triangulate_polygon);
+	ClassDB::bind_method(D_METHOD("triangulate_delaunay_2d", "points"), &_Geometry::triangulate_delaunay_2d);
 	ClassDB::bind_method(D_METHOD("convex_hull_2d", "points"), &_Geometry::convex_hull_2d);
 	ClassDB::bind_method(D_METHOD("clip_polygon", "points", "plane"), &_Geometry::clip_polygon);
 

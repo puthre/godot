@@ -69,6 +69,7 @@ public:
 			ysort_children_count = -1;
 			ysort_xform = Transform2D();
 			ysort_pos = Vector2();
+			layer_mask = 0xfffff;
 		}
 	};
 
